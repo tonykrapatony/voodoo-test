@@ -1,0 +1,55 @@
+header {
+    @apply relative;
+    .header_content {
+        @apply flex items-center justify-between gap-[40px] py-[24px] border-b border-[rgba(0,0,0,0.10)];
+        @media (max-width: 1024px) {
+            @apply justify-start gap-0;
+        }
+        .burger {
+            @apply mr-[16px];
+            @media (min-width: 1025px) {
+                @apply hidden;
+            }
+        }
+        .logo {
+            @apply text-[32px] font-bold font-avenir leading-normal;
+        }
+        nav ul {
+            @apply flex items-center justify-between gap-[24px];
+
+            @media (max-width: 1024px) {
+                @apply absolute left-[-100%] top-[100%] flex-col items-start p-[20px]  transition-[left] ease-in-out duration-500 bg-white border-b border-r border-[rgba(0,0,0,0.10)];
+                &.show {
+                    @apply left-0 bg-white z-10;
+                }
+            }
+
+            li {
+                @apply flex items-center gap-[4px] cursor-pointer;
+            }
+        }
+        .search {
+            @apply flex-1 relative py-[12px] pl-[52px] pr-[16px] bg-[#F0F0F0] rounded-[62px];
+            button {
+                @apply absolute left-[16px];
+            }
+            input {
+                @apply bg-transparent placeholder:text-[rgba(0,0,0,.40)] placeholder:text-[16px] placeholder:font-normal;
+            }
+            @media (max-width: 1024px) {
+                @apply hidden;
+            }
+        }
+        .actions {
+            @apply flex items-center justify-between gap-[14px];
+            @media (max-width: 1024px) {
+                @apply ml-auto;
+            }
+            .search_mob {
+                @media (min-width: 1025px) {
+                    @apply hidden;
+                }
+            }
+        }
+    }
+}

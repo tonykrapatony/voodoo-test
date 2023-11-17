@@ -1,0 +1,21 @@
+.notification {
+    @apply bg-black;
+    .notification_content {
+        @apply relative py-[9px];
+        p {
+            @apply max-w-[314px] mx-auto text-[12px] font-normal text-white text-center;
+            a {
+                @apply underline font-medium;
+            }
+            @media (min-width: 1240px) {
+                @apply max-w-none text-[14px]
+            }
+        }
+        .close {
+            @apply hidden;
+            @media (min-width: 1240px) {
+                @apply block absolute right-0 top-[50%] translate-y-[-50%] cursor-pointer ;
+            }
+        }
+    }
+}

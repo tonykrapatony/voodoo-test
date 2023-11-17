@@ -1,0 +1,117 @@
+footer {
+    @apply bg-[#f0f0f0] pb-[82px];
+    @media (max-width: 768px) {
+        @apply pb-[27.26px];
+    }
+    .container {
+        @apply relative pt-[140px];
+        @media (max-width: 768px) {
+            @apply relative pt-[189px];
+        }
+    }
+    .subscribe {
+        @apply absolute left-[50%] bottom-[100%] translate-y-[50%] translate-x-[-50%] max-w-[1272px] w-full flex items-center justify-between py-[36px] px-[64px] bg-black rounded-[20px];
+        width: calc(100% - 32px);
+        @media (max-width: 1272px) {
+            @apply max-w-none;
+        }
+        @media (max-width: 768px) {
+            @apply flex-col pt-[32px] pb-[28px] px-[24px] gap-[32px];
+        }
+        h1 {
+            @apply w-full max-w-[551px] text-[40px] leading-[45px] text-white;
+            @media (max-width: 768px) {
+                @apply max-w-[311px] text-[32px] font-avenir font-extrabold leading-[35px];
+            }
+        }
+        form {
+            @apply w-full max-w-[349px] flex flex-col gap-y-[14px];
+            @media (max-width: 768px) {
+                @apply max-w-[311px] gap-y-[12px];
+            }
+            .input {
+                @apply w-full flex items-center justify-between gap-[12px] py-[12px] px-[16px] bg-white rounded-[62px] overflow-hidden;
+                input {
+                    @apply flex-1 text-[16px] font-normal text-[rgba(0,0,0,0.4)];
+                    @media (max-width: 768px) {
+                        @apply text-[14px];
+                    }                       
+                }
+            }
+            button {
+                @apply w-full py-[12px] px-[16px] bg-white rounded-[62px] text-[16px] font-medium text-black;
+                @media (max-width: 768px) {
+                    @apply text-[14px];
+                }  
+            }
+        }
+    }
+    .footer_top {
+        @apply pb-[50px] border-b border-[rgba(0,0,0,0.1)];
+        @media (max-width: 768px) {
+            @apply pb-[40px];
+        }
+        .footer_menu {
+            @apply flex items-start justify-between flex-wrap;
+            @media (max-width: 1024px) {
+                @apply gap-y-[42px];
+            }
+            .menu_item {
+                @apply min-w-fit flex flex-col items-start gap-[26px];
+                @media (max-width: 1024px) {
+                    @apply w-[50%] gap-[16px];
+                    &:first-child {
+                        @apply w-full mb-[-18px];
+                    }
+                }
+                .logo {
+                    @apply text-[33.455px] font-extrabold font-avenir leading-normal;
+                    @media (max-width: 768px) {
+                        @apply text-[28.847px];
+                    }
+                }
+                p {
+                    @apply w-[248px] mt-[-1px] mb-[9px] text-[14px] font-normal leading-[22px];
+                    @media (max-width: 1024px) {
+                        @apply w-full;
+                    }
+                }
+                .title {
+                    @apply text-[16px] font-medium leading-[18px] tracking-[3px];
+                    @media (max-width: 768px) {
+                        @apply text-[14px];
+                    }
+                }
+                ul {
+                    @apply flex flex-col items-start gap-[20px];
+                    @media (max-width: 768px) {
+                        @apply gap-[10px];
+                    }
+                    li {
+                        @apply text-[16px] font-medium leading-[19px] text-[rgba(0,0,0,0.6)];
+                        @media (max-width: 768px) {
+                            @apply text-[14px] leading-[16px];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer_bottom {
+        @apply flex items-center justify-between pl-[5.625%] pr-[6.94%] pt-[25px];
+        @media (min-width: 1440px) {
+            @apply max-w-[1440px] mx-auto pl-[81px] pr-[100px];
+        }
+        @media (max-width: 768px) {
+            @apply flex-col gap-[17px] pt-[16px];
+        }
+        .privacy p {
+            @apply text-[14px] font-normal leading-normal text-[rgba(0,0,0,0.6)];
+        }
+        .payment {
+            ul {
+                @apply flex items-center justify-between gap-[12px];
+            }
+        }
+    }
+}
